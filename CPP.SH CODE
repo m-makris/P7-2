@@ -1,0 +1,78 @@
+// Example program
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool all_the_same(int x, int y, int z);
+bool all_different(int x, int y, int z);
+bool sorted(int x, int y, int z);
+
+
+int main(){
+    int x;
+    int y;
+    int z;
+         cout << "Enter numbers Q to quit: " << endl;
+         cin >> x >> y >> z;
+         if (all_the_same(x, y, z) == true) {
+             cout << "numbers are all the same " << endl;
+         }
+         if (all_the_same(x, y, z) == false) {
+             cout << "numbers are not the same " << endl;
+         }
+         if (all_different(x, y, z) == true) {
+             cout << "numbers are different " << endl;
+         }
+         if (all_different(x, y, z) == false) {
+             cout << "numbers are not all different " << endl;
+         }
+         if (sorted(x, y, z) == true) {
+             cout << "numbers are sorted " << endl;
+         }
+         if (sorted(x, y, z) == false) {
+             cout << "numbers are not sorted " << endl;
+         }
+}
+
+bool all_the_same(int x, int y, int z){
+        bool result = true;
+    if (x == y && z == y && x == z){
+         result = true;
+    }
+
+    else {
+        result = false;
+    }
+    return result;
+}
+
+
+bool all_different(int x, int y, int z){
+    bool result = true;
+    
+    if (x != y && y != z && z != x){
+        result =true;
+    }
+    else {
+        result = false;
+    }
+        return result;
+        
+}
+
+    bool sorted(int x, int y, int z){
+        bool result = true;
+             
+
+        if (x <= y && y <= z && x <= z){
+             result = true;
+         }
+        else{
+             result = false;
+    }
+             return result;
+         
+         
+           
+    
+  }
